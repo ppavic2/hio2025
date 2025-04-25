@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  problempoints=100,
+  timelimit=1 sekunda,
+  memorylimit=512 MiB,
+]{Automatizacija}
+
+Životni je cilj uspješne poduzetnice Elene Mošus zamijeniti svu ljudsku radnu snagu 
+umjetnom inteligencijom. 
+Kako bi ubrzala taj proces, zaključila je da je potrebno uključiti se u hrvatsko zakonodavstvo. 
+Njezin naum došao je do  
+predsjednika države, koji ju je postavio na čelo novonastalog 
+Ministarstva automatizacije logičkih načela i analitičkog razmišljanja 
+(skraćeno MALNAR). 
+Njihov je prvi zadatak automatizirati sljedeću igru. 
+
+Igra se sastoji od dva igrača. 
+Svakom je igraču dan skup od $K$ (različitih) brojeva između $1$ i $N$. 
+Svaki igrač ima pristup jedino brojevima vlastitog skupa, a cilj igre 
+pronaći je veličinu presjeka danih skupova. 
+Igrači ne mogu komunicirati direktno, već samo koristeći zajedničku ploču 
+na koju mogu postavljati žetone. 
+Pravila igre su sljedeća:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+  \item 
+  Ploča se sastoji od $N$ praznih polja na kojima se mogu postavljati žetoni. 
+
+  \item 
+  Igrači naizmjenično postavljaju žetone na željeno slobodno polje. 
+  Jednom kada je žeton postavljen na polje, ono se smatra zauzetim i na njega se više 
+  ne mogu postavljati drugi žetoni. 
+
+  \item 
+  Prvi igrač postavlja plave žetone, a drugi igrač crvene.
+
+  \item 
+  Oba igrača u svakom trenutku imaju pregled nad cijelim stanjem ploče. 
+
+  \item 
+  Kada je igrač na potezu, umjesto postavljanja žetona, on može odlučiti 
+  završiti igru tako da proglasi veličinu presjeka danih skupova. 
+  Ukoliko nema slobodnih polja, igrač mora završiti igru. 
+\end{itemize}
+Tijekom igre igrači mogu komunicirati isključivo preko ploče, no naravno, 
+prije početka igre moraju se dogovoriti oko strategije. 
+
+MALNAR je odlučio da igrače u ovoj igri treba zamijeniti 
+automatiziranim sustavom umjetne inteligencije koji ima nepogrešivu strategiju te koji 
+može odigrati potez odmah nakon učitavanja stanja ploče. 
+Pomozite MALNAR-u te osmislite strategiju za oba igrača 
+koja osigurava da barem jedan od igrača u nekom trenutku završi igru i proglasi 
+točnu veličinu presjeka danih skupova. 
+
+Da bi automatizirani sustav mogao brzo raditi poteze,  
+strategija će se sastojati u tome da se za svako moguće stanje 
+ploče odredi koji potez treba odigrati. 
+To znači da automatizirani sustav neće imati pregled nad nizom poteza
+koji je doveo igru do trenutnog stanja, 
+već mora moći napraviti potez isključivo na temelju danog trenutnog stanja ploče.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+
+U prvom je retku prirodan broj $P$ ($P=1$ ili $P=2$) koji određuje 
+radi li se o prvom ili drugom igraču. 
+
+U drugom su retku prirodni brojevi $N$ i $K$ iz teksta zadatka. 
+
+U trećem je retku niz $a_1, a_2, \dots, a_K$ od $K$ različitih 
+prirodnih brojeva ($1 \leq a_i \leq N$) 
+koji predstavljaju skup brojeva dan promatranom igraču. 
+
+U četvrtom je retku prirodan broj $T$ koji određuje broj stanja ploče za koje je 
+potrebno odigrati potez. 
+U testnim podacima, $T$ će uvijek biti jednak ukupnom broju mogućih stanja ploče, 
+što znači da odabrana strategija mora odrediti potez za svako moguće stanje ploče. 
+Međutim, samo za potrebe probnog primjera, $T$ može poprimiti i manju vrijednost. 
+
+U svakom od sljedećih $T$ redaka je opis jednog od mogućih stanja ploče. 
+Opis stanja ploče sastoji se od niza od $N$ znakova “\texttt{P}”, “\texttt{C}” ili “\texttt{.}”, 
+pri čemu znak “\texttt{P}” predstavlja plavi žeton, “\texttt{C}” predstavlja crveni žeton, 
+a “\texttt{.}” predstavlja prazno polje.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+
+Za svaki od $T$ zadanih stanja ploče ispišite 
+po jedan redak oblika “\texttt{+} $m$” ili “\texttt{!} $m$”, za neki cijeli broj $m$. 
+
+Ispis oblika “\texttt{+} $m$” predstavlja postavljanje žetona 
+na $m$-tu poziciju na ploču. 
+Da bi se ispis smatrao valjanim, mora vrijediti $1 \leq m \leq N$, 
+te odabrano polje ne smije biti zauzeto. 
+
+Ispis oblika “\texttt{!} $m$” predstavlja proglašenje da veličina presjeka danih skupova 
+iznosi $m$ te završetak igre. 
+Da bi se ispis smatrao valjanim, mora vrijediti $0 \leq m \leq N$, 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Scoring
+\subsection*{Bodovanje}
+
+Vaše će rješenje biti testirano u dva koraka. 
+Prvo će biti pozvano na testnom podatku u kojem je $P = 1$, a nakon toga 
+na testnom podatku u kojem je $P = 2$. 
+Vrijednosti ulaznih podataka $N$ i $K$ bit će jednake prilikom oba pokretanja. 
+Uz pretpostavku da je ispis vašeg programa valjan prilikom oba pokretanja, 
+program izrađen od strane organizatora simulirat će tijek igre, prateći 
+ispisani opis strategije. 
+Ako navedena simulacija igre završi 
+s ispravno određenom veličinom presjeka danih skupova, vaše rješenje 
+smatrat će se točnim.
+Vrijeme izvršavanja vašeg rješenja je zbroj vremena izvršavanja oba koraka evaluacije. 
+
+U svim podzadacima vrijedi $1 \leq N \leq 16$ i $1 \leq K \leq N$.
+
+{\renewcommand{\arraystretch}{1.4}
+  \setlength{\tabcolsep}{6pt}
+  \begin{tabular}{ccl}
+   Podzadatak & Broj bodova & Ograničenja \\ \midrule
+    1 & 11 & Dani skupovi sastojat će se od $K$ uzastopnih vrijednosti. \\
+    2 & 16 & $N \leq 4$ \\
+    3 & 13 & $N = 16$ i $K = 2$ \\
+    4 & 7 & $N$ je paran i vrijednosti brojeva u danim skupovima su između $1$ i $\frac{N}{2}$. \\
+    5 & 12 & Vrijednosti brojeva u danim skupovima su strogo manje od $N$. \\
+    6 & 41 & Nema dodatnih ograničenja.
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X}
+\sampleinputs{test/automatizacija.dummy.in.1}{test/automatizacija.dummy.out.1} &
+\sampleinputs{test/automatizacija.dummy.in.2}{test/automatizacija.dummy.out.2}
+\end{tabularx}
+
+\textbf{Pojašnjenje probnih primjera:}
+
+{\renewcommand{\arraystretch}{1.4}
+  \setlength{\tabcolsep}{6pt}
+  \begin{tabular}{lcl}
+    Stanje ploče & Potez & Napomena \\ \midrule
+    \texttt{....} & \texttt{+ 1} & Prvi igrač postavlja žeton na prvo polje. \\
+    \texttt{P...} & \texttt{+ 3} & Drugi igrač postavlja žeton na treće polje. \\
+    \texttt{P.C.} & \texttt{+ 4} & Prvi igrač postavlja žeton na četvrto polje. \\
+    \texttt{P.CP} & \texttt{+ 3} & Drugi igrač postavlja žeton na drugo polje. \\
+    \texttt{PCCP} & \texttt{\frenchspacing! 1} & Prvi igrač zaustavlja igru te 
+    proglašava da veličina presjeka iznosi 1. Točno! \\
+
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../hio.tex"
+%%% End:
