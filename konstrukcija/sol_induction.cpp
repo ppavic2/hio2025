@@ -17,7 +17,7 @@ int a[25];
 int p[25];
 int pos[maxn];
 
-vector<ii> exeptions(vector<int> a) {
+vector<ii> exceptions(vector<int> a) {
 	if(a.size() == 4) {
 		return {{0, 1}, {8, 9}, {4, 6}, {12, 14},
 				{3, 7}, {11, 15}, {2, 10}, {5, 13}};
@@ -45,7 +45,7 @@ vector<ii> solve(vector<int> a) {
 		if(a[i] & 2) b[i] += 2, b[n - 1] -= 2;
 	
 	if(b[n - 1] < 0)
-		return exeptions(a);
+		return exceptions(a);
 	else b[n - 2] += b[n - 1];
 
 	b.pop_back();
