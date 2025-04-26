@@ -23,6 +23,9 @@ rm test/*
 ./gen 10 4 30 > test/konstrukcija.in.1p
 ./gen 10 4 33 > test/konstrukcija.in.1q
 ./gen 10 4 21 > test/konstrukcija.in.1r
+./gen 11 2 1  > test/konstrukcija.in.1s
+./gen 11 3 2  > test/konstrukcija.in.1t
+./gen 11 4 3  > test/konstrukcija.in.1u
 
 #subtask 2
 ./gen 5 10 2 7  1 > test/konstrukcija.in.2a
@@ -38,23 +41,29 @@ rm test/*
 ./gen 5 20 2 17 1 > test/konstrukcija.in.2k
 ./gen 5 20 2 18 1 > test/konstrukcija.in.2l
 ./gen 5 20 2 19 1 > test/konstrukcija.in.2m
+./gen 11 20 111   > test/konstrukcija.in.2n
+./gen 11 20 112   > test/konstrukcija.in.2o
+./gen 11 20 113   > test/konstrukcija.in.2p
 
 #subtask 3
-./gen 6 6 1 > test/konstrukcija.in.3a
-./gen 8 2 2 > test/konstrukcija.in.3b
-./gen 8 3 3 > test/konstrukcija.in.3c
-./gen 8 4 4 > test/konstrukcija.in.3d
-./gen 8 4 4 > test/konstrukcija.in.3e
-./gen 8 5 5 > test/konstrukcija.in.3f
-./gen 8 5 5 > test/konstrukcija.in.3g
-./gen 8 5 5 > test/konstrukcija.in.3h
-./gen 8 6 6 > test/konstrukcija.in.3i
-./gen 9 1   > test/konstrukcija.in.3j
-./gen 9 4   > test/konstrukcija.in.3k
-./gen 9 7   > test/konstrukcija.in.3l
-./gen 9 10  > test/konstrukcija.in.3m
-./gen 7 1   > test/konstrukcija.in.3n
-./gen 7 2   > test/konstrukcija.in.3o
+./gen 6 6 1  > test/konstrukcija.in.3a
+./gen 8 2 2  > test/konstrukcija.in.3b
+./gen 8 3 3  > test/konstrukcija.in.3c
+./gen 8 4 4  > test/konstrukcija.in.3d
+./gen 8 4 4  > test/konstrukcija.in.3e
+./gen 8 5 5  > test/konstrukcija.in.3f
+./gen 8 5 5  > test/konstrukcija.in.3g
+./gen 8 5 5  > test/konstrukcija.in.3h
+./gen 8 6 6  > test/konstrukcija.in.3i
+./gen 9 1    > test/konstrukcija.in.3j
+./gen 9 4    > test/konstrukcija.in.3k
+./gen 9 7    > test/konstrukcija.in.3l
+./gen 9 10   > test/konstrukcija.in.3m
+./gen 7 1    > test/konstrukcija.in.3n
+./gen 7 2    > test/konstrukcija.in.3o
+./gen 11 6 4 > test/konstrukcija.in.3p
+./gen 11 6 5 > test/konstrukcija.in.3q
+./gen 11 6 6 > test/konstrukcija.in.3r
 
 #subtask 4
 ./gen 2 20 33     > test/konstrukcija.in.4a
@@ -93,3 +102,6 @@ rm test/*
 ./gen 9 5         > test/konstrukcija.in.4ah
 ./gen 9 8         > test/konstrukcija.in.4ai
 ./gen 9 10        > test/konstrukcija.in.4aj
+./gen 11 20 114   > test/konstrukcija.in.4ak
+./gen 11 20 115   > test/konstrukcija.in.4al
+./gen 11 20 116   > test/konstrukcija.in.4am

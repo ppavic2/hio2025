@@ -249,5 +249,25 @@ int main(int argc, char** argv) {
 		}
 		print();
 	}
+	if(type == 11) {
+		//more of -1 cases
+		n = atoi(argv[2]);
+		seed = atoi(argv[3]);
+		mt19937 rng(seed);
+
+		int flag = 1;
+		while(flag) {
+			int sum = (1 << (n - 1));
+			vector<int> b;
+			for(int i = 1;i < n;i++) {
+				int r = rand(0, sum, rng);
+				a[i] = r, sum -= r;
+				if(r & 1) flag = 0;
+			}
+			a[0] = sum;
+			if(sum & 1) flag = 0;
+		}
+		print();
+	}
 	return 0;
 }
