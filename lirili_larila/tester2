@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cat o1 > o2
+((i=0))
+
+while diff -w o1 o2
+do
+	./gen > input
+	./pavic < input > o1
+	./pavic_test < input > o2
+	echo $i
+	((i=i+1))
+done
