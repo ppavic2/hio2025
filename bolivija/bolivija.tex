@@ -18,10 +18,10 @@ predstavljaju redom visine planina u planinskom lancu.
 Pri tome, $N$ je neparan i središnja planina (na poziciji $\frac{N+1}{2}$) je upravo ona najviša, 
 na čijem je samom vrhu ugasli vulkan Nevado Sajama. 
 
-Organizatori imaju vrlo specifične uvjete za prikupljene fotografije. 
+Organizatori imaju vrlo specifične uvjete za prikupljanje fotografija. 
 Prvo, biraju dva nenegativna cijela broja $A$ i $B$ tako da je $A < B$ te da je $B$ manji ili 
-jednak visini najvišeg vrha, Navado Sajame. 
-Zatim, namještaju kadar fotografije tako da je svih $N$ planina vidljivo, no tako 
+jednak visini najvišeg vrha, Nevado Sajame. 
+Zatim, namještaju kadar fotografije tako da širinom obuhvaća svih $N$ planina, no tako 
 da fotografija obuhvaća samo raspon visina između $A$ i $B$. 
 Dodatno, organizatori su zadovoljni fotografijom samo ukoliko je ona simetrična s 
 obzirom na os simetrije koja prolazi središnjom planinom. 
@@ -29,7 +29,7 @@ obzirom na os simetrije koja prolazi središnjom planinom.
 \begin{figure}[!h]
       \centering
       \includegraphics[width=\linewidth]{pic/planine.png}
-      \caption{Primjer valjanog izbora fotografije}
+      \caption*{Slika: Primjer valjanog izbora fotografije koji odgovara drugom probnom primjeru}
 \end{figure}
 
 Organizatore sada zanima koliko različitih fotografija mogu prikupiti, odnosno 
@@ -59,22 +59,25 @@ ili jednaka visini središnje planine.
 \subsection*{Izlazni podaci}
 
 Ispišite $Q + 1$ redaka. U $i$-tom retku ispišite traženi mogući broj fotografija 
-nakon $i$ tektonskih promjena. 
+nakon $i - 1$ tektonskih promjena. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Scoring
 \subsection*{Bodovanje}
 
-U svim podzadacima vrijedi $1 \leq N \leq 200~000$ i $0 \leq Q \leq 200~000$.
+U svim podzadacima vrijedi $3 \leq N \leq 200~000$ i $0 \leq Q \leq 200~000$. 
+
+Za sve $i = 1, \dots, N$ vrijedi da je $v_i \leq 654~200$ 
+(visina vrha Nevado Sajama u centimetrima). 
 
 {\renewcommand{\arraystretch}{1.4}
   \setlength{\tabcolsep}{6pt}
   \begin{tabular}{ccl}
    Podzadatak & Broj bodova & Ograničenja \\ \midrule
-    1 & 9 & $Q = 0, N \leq 300, v_i \leq 300$ \\
+    1 & 9 & $Q = 0, N \leq 300,$ te $v_i \leq 300$ za sve $i = 1, \dots, N$ \\
     2 & 23 & $Q = 0$ \\
     3 & 31 & Svaka promjena mijenja visinu planine najviše za $1$.  \\
-    6 & 37 & Nema dodatnih ograničenja. \\
+    4 & 37 & Nema dodatnih ograničenja. \\
 \end{tabular}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -86,7 +89,13 @@ U svim podzadacima vrijedi $1 \leq N \leq 200~000$ i $0 \leq Q \leq 200~000$.
 \sampleinputs{test/bolivija.dummy.in.3}{test/bolivija.dummy.out.3}
 \end{tabularx}
 
-\textbf{Pojašnjenje prvog probnog primjera:}
+\textbf{Pojašnjenje drugog probnog primjera:}
+
+Mogući izbori za $A$ i $B$ su: 
+$(0, 1), (2, 3), (2, 4), (3, 4), (5, 6), (5, 7), (6, 7)$. 
+Ukupno ih je sedam. 
+
+Slika u tekstu odgovara odabiru $A = 2$ i $B = 4$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % We're done

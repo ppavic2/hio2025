@@ -44,9 +44,15 @@ odredila prirodne brojeve $A$ i $B$, koji predstavljaju broj pokorenih
 Pomozite ovoj umiljatoj kaktus-slonici da odabere početne čvorove za obje vrste boraca 
 tako da na kraju borbe brojevi pokorenih čvorova odgovaraju brojevima $A$ i $B$. 
 
+Dodatno, potrebno je napraviti takav odabir za $T$ različitih situacija. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Input
 \subsection*{Ulazni podaci}
+
+U prvom je retku prirodni broj $T$, broj različitih situacija.
+
+U sljedećim retcima slijede redom opisi situacija. Svaki opis zadan je u sljedećem formatu.
 
 U prvom su retku prirodni brojevi $N, M, A$ i $B$, redom broj čvorova i broj bridova 
 u danom kaktus grafu te brojevi pokorenih čvorova redom od strane letećih i kopnenih boraca.
@@ -64,27 +70,33 @@ uvjete zadatka.
 % Output
 \subsection*{Izlazni podaci}
 
-U prvi i jedini redak ispišite dva prirodna broja odvojena razmakom, koja 
-predstavljaju oznake početnih čvorova letećih i kopnenih boraca. 
+Ispišite $T$ redaka, po jedan za svaku situaciju. 
+
+U $i$-tom retku ispišite dva prirodna broja odvojena razmakom, koji 
+predstavljaju oznake početnih čvorova letećih i kopnenih boraca, 
+željeni odabir za $i$-tu situaciju. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Scoring
 \subsection*{Bodovanje}
 
-U svim podzadacima vrijedi $2 \leq N \leq 200~000$ te $1 \leq M \leq 400~000$. 
+U svim podzadacima vrijedi $2 \leq N \leq 200~000$ te $2 \leq A + B \leq N$. 
+Dodatno, suma vrijednosti $N$ po svim situacijama je manja ili jednaka od $200~000$.
+
+Ograničenja navedena ispod primjenjuju se na svaku od $T$ danih situacija. 
 
 {\renewcommand{\arraystretch}{1.4}
   \setlength{\tabcolsep}{6pt}
   \begin{tabular}{ccl}
    Podzadatak & Broj bodova & Ograničenja \\ \midrule
-    1 & 6 & $N \leq 300$\\
-    2 & 8 & Dani graf je stablo te $N \leq 5000$. \\
+    1 & 6 & Suma vrijednosti $N$ je $\leq 300$. \\
+    2 & 8 & Dani graf je stablo te suma vrijednosti $N$ je $\leq 5000$. \\
     3 & 25 & Dani graf je stablo. \\
-    4 & 13 & Dani graf ima točno jedan ciklus te $N \leq 5000$. \\
+    4 & 13 & Dani graf ima točno jedan ciklus te suma vrijednosti $N$ je $\leq 5000$. \\
     5 & 17 & Dani graf ima točno jedan ciklus te je garantirano da postoji rješenje  \\
       &    & u kojem se oba početna čvora nalaze unutar tog ciklusa.  \\
     6 & 8 & Dani graf ima točno jedan ciklus. \\
-    7 & 11 & $N \leq 5000$ \\
+    7 & 11 & Suma vrijednosti $N$ je $\leq 5000$. \\
     8 & 12 & Nema dodatnih ograničenja. \\
 \end{tabular}}
 
