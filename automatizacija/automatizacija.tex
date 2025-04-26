@@ -89,9 +89,10 @@ a “\texttt{.}” predstavlja prazno polje.
 
 Za svaki od $T$ zadanih stanja ploče ispišite 
 po jedan redak oblika “\texttt{+} $m$” ili “\texttt{!} $m$”, za neki cijeli broj $m$. 
+\vspace{-0.15em}
 
 Ispis oblika “\texttt{+} $m$” predstavlja postavljanje žetona 
-na $m$-tu poziciju na ploču. 
+na $m$-tu poziciju na ploču.
 Da bi se ispis smatrao valjanim, mora vrijediti $1 \leq m \leq N$, 
 te odabrano polje ne smije biti zauzeto. 
 
@@ -115,16 +116,16 @@ s ispravno određenom veličinom presjeka danih skupova, vaše rješenje
 smatrat će se točnim.
 Vrijeme izvršavanja vašeg rješenja je zbroj vremena izvršavanja oba koraka evaluacije. 
 
-U svim podzadacima vrijedi $1 \leq N \leq 16$ i $1 \leq K \leq N$.
+U svim podzadacima vrijedi $2 \leq N \leq 16$ i $1 \leq K \leq N$.
 
 {\renewcommand{\arraystretch}{1.4}
   \setlength{\tabcolsep}{6pt}
   \begin{tabular}{ccl}
    Podzadatak & Broj bodova & Ograničenja \\ \midrule
     1 & 11 & Dani skupovi sastojat će se od $K$ uzastopnih vrijednosti. \\
-    2 & 16 & $N \leq 4$ \\
-    3 & 13 & $N = 16$ i $K = 2$ \\
-    4 & 7 & $N$ je paran i vrijednosti brojeva u danim skupovima su između $1$ i $\frac{N}{2}$. \\
+    2 & 7 & $N$ je paran i vrijednosti brojeva u danim skupovima su između $1$ i $\frac{N}{2}$. \\
+    3 & 16 & $N \leq 4$ \\
+    4 & 13 & $N = 16$ i $K = 2$ \\
     5 & 12 & Vrijednosti brojeva u danim skupovima su između $1$ i $N - 1$. \\
     6 & 41 & Nema dodatnih ograničenja.
 \end{tabular}}
@@ -146,7 +147,7 @@ U svim podzadacima vrijedi $1 \leq N \leq 16$ i $1 \leq K \leq N$.
     \texttt{....} & \texttt{+ 1} & Prvi igrač postavlja žeton na prvo polje. \\
     \texttt{P...} & \texttt{+ 3} & Drugi igrač postavlja žeton na treće polje. \\
     \texttt{P.C.} & \texttt{+ 4} & Prvi igrač postavlja žeton na četvrto polje. \\
-    \texttt{P.CP} & \texttt{+ 3} & Drugi igrač postavlja žeton na drugo polje. \\
+    \texttt{P.CP} & \texttt{+ 2} & Drugi igrač postavlja žeton na drugo polje. \\
     \texttt{PCCP} & \texttt{\frenchspacing! 1} & Prvi igrač zaustavlja igru te 
     proglašava da veličina presjeka iznosi 1. Točno! \\
 
