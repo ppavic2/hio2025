@@ -6,52 +6,52 @@
 ./bolivijaGEN -typ=random -t=10 -n=299 -q=0 -maxa=300 > test/bolivija.in.1f
 ./bolivijaGEN -typ=random -t=1 -n=299 -q=0 -maxa=300 > test/bolivija.in.1g
 echo "subtask 1 in done"
-./bolivijaGEN -typ=random -t=10000 -n=199999 -q=0 -maxa=6542000 > test/bolivija.in.2a
-./bolivijaGEN -typ=random -t=1000 -n=199999 -q=0 -maxa=6542000 > test/bolivija.in.2b
-./bolivijaGEN -typ=random -t=100 -n=199999 -q=0 -maxa=6542000 > test/bolivija.in.2c
-./bolivijaGEN -typ=random -t=10 -n=199999 -q=0 -maxa=6542000 > test/bolivija.in.2d
-./bolivijaGEN -typ=random -t=1 -n=199999 -q=0 -maxa=6542000 > test/bolivija.in.2e
-./bolivijaGEN -typ=random -t=1 -n=1999 -q=0 -maxa=6542000 > test/bolivija.in.2f
-./bolivijaGEN -typ=random -t=1 -n=199 -q=0 -maxa=6542000 > test/bolivija.in.2g
-./bolivijaGEN -typ=random -t=1 -n=19 -q=0 -maxa=6542000 > test/bolivija.in.2h
-./bolivijaGEN -typ=random -t=1 -n=3 -q=0 -maxa=6542000 > test/bolivija.in.2i
-./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=6542000 -maxlen=2 > test/bolivija.in.2j
-./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=6542000 -maxlen=10 > test/bolivija.in.2k
-./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=6542000 -maxlen=100 > test/bolivija.in.2l
-./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=6542000 -maxlen=1000 > test/bolivija.in.2m
-./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=6542000 -maxlen=10000 > test/bolivija.in.2n
+./bolivijaGEN -typ=random -t=10000 -n=199999 -q=0 -maxa=654200 > test/bolivija.in.2a
+./bolivijaGEN -typ=random -t=1000 -n=199999 -q=0 -maxa=654200 > test/bolivija.in.2b
+./bolivijaGEN -typ=random -t=100 -n=199999 -q=0 -maxa=654200 > test/bolivija.in.2c
+./bolivijaGEN -typ=random -t=10 -n=199999 -q=0 -maxa=654200 > test/bolivija.in.2d
+./bolivijaGEN -typ=random -t=1 -n=199999 -q=0 -maxa=654200 > test/bolivija.in.2e
+./bolivijaGEN -typ=random -t=1 -n=1999 -q=0 -maxa=654200 > test/bolivija.in.2f
+./bolivijaGEN -typ=random -t=1 -n=199 -q=0 -maxa=654200 > test/bolivija.in.2g
+./bolivijaGEN -typ=random -t=1 -n=19 -q=0 -maxa=654200 > test/bolivija.in.2h
+./bolivijaGEN -typ=random -t=1 -n=3 -q=0 -maxa=654200 > test/bolivija.in.2i
+./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=654200 -maxlen=2 > test/bolivija.in.2j
+./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=654200 -maxlen=10 > test/bolivija.in.2k
+./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=654200 -maxlen=100 > test/bolivija.in.2l
+./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=654200 -maxlen=1000 > test/bolivija.in.2m
+./bolivijaGEN -typ=smalllen -n=199999 -q=0 -maxa=654200 -maxlen=10000 > test/bolivija.in.2n
 echo "subtask 2 in done"
-./bolivijaGEN -typ=random -t=10000 -n=199999 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3a
-./bolivijaGEN -typ=random -t=1000 -n=199999 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3b
-./bolivijaGEN -typ=random -t=100 -n=199999 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3c
-./bolivijaGEN -typ=random -t=10 -n=199999 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3d
-./bolivijaGEN -typ=random -t=1 -n=199999 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3e
-./bolivijaGEN -typ=random -t=1 -n=1999 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3f
-./bolivijaGEN -typ=random -t=1 -n=199 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3g
-./bolivijaGEN -typ=random -t=1 -n=19 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3h
-./bolivijaGEN -typ=random -t=1 -n=3 -q=200000 -maxa=6542000 -ch1 > test/bolivija.in.3i
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=2 -ch1 > test/bolivija.in.3j
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=10 -ch1 > test/bolivija.in.3k
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=100 -ch1 > test/bolivija.in.3l
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=1000 -ch1 > test/bolivija.in.3m
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=10000 -ch1 > test/bolivija.in.3n
+./bolivijaGEN -typ=random -t=10000 -n=199999 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3a
+./bolivijaGEN -typ=random -t=1000 -n=199999 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3b
+./bolivijaGEN -typ=random -t=100 -n=199999 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3c
+./bolivijaGEN -typ=random -t=10 -n=199999 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3d
+./bolivijaGEN -typ=random -t=1 -n=199999 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3e
+./bolivijaGEN -typ=random -t=1 -n=1999 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3f
+./bolivijaGEN -typ=random -t=1 -n=199 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3g
+./bolivijaGEN -typ=random -t=1 -n=19 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3h
+./bolivijaGEN -typ=random -t=1 -n=3 -q=200000 -maxa=654200 -ch1 > test/bolivija.in.3i
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=2 -ch1 > test/bolivija.in.3j
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=10 -ch1 > test/bolivija.in.3k
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=100 -ch1 > test/bolivija.in.3l
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=1000 -ch1 > test/bolivija.in.3m
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=10000 -ch1 > test/bolivija.in.3n
 echo "subtask 3 in done"
-./bolivijaGEN -typ=random -t=10000 -n=199999 -q=200000 -maxa=6542000 > test/bolivija.in.4a
-./bolivijaGEN -typ=random -t=1000 -n=199999 -q=200000 -maxa=6542000 > test/bolivija.in.4b
-./bolivijaGEN -typ=random -t=100 -n=199999 -q=200000 -maxa=6542000 > test/bolivija.in.4c
-./bolivijaGEN -typ=random -t=10 -n=199999 -q=200000 -maxa=6542000 > test/bolivija.in.4d
-./bolivijaGEN -typ=random -t=1 -n=199999 -q=200000 -maxa=6542000 > test/bolivija.in.4e
-./bolivijaGEN -typ=random -t=1 -n=1999 -q=200000 -maxa=6542000 > test/bolivija.in.4f
-./bolivijaGEN -typ=random -t=1 -n=199 -q=200000 -maxa=6542000 > test/bolivija.in.4g
-./bolivijaGEN -typ=random -t=1 -n=19 -q=200000 -maxa=6542000 > test/bolivija.in.4h
-./bolivijaGEN -typ=random -t=1 -n=3 -q=200000 -maxa=6542000 > test/bolivija.in.4i
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=2 > test/bolivija.in.4j
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=10 > test/bolivija.in.4k
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=100 > test/bolivija.in.4l
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=1000 > test/bolivija.in.4m
-./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=6542000 -maxlen=10000 > test/bolivija.in.4n
-./bolivijaGEN -typ=manychanges -n=199999 -q=200000 -maxa=6542000 > test/bolivija.in.4o
-./bolivijaGEN -typ=manychanges -n=199999 -q=200000 -maxa=1000000 > test/bolivija.in.4p
+./bolivijaGEN -typ=random -t=10000 -n=199999 -q=200000 -maxa=654200 > test/bolivija.in.4a
+./bolivijaGEN -typ=random -t=1000 -n=199999 -q=200000 -maxa=654200 > test/bolivija.in.4b
+./bolivijaGEN -typ=random -t=100 -n=199999 -q=200000 -maxa=654200 > test/bolivija.in.4c
+./bolivijaGEN -typ=random -t=10 -n=199999 -q=200000 -maxa=654200 > test/bolivija.in.4d
+./bolivijaGEN -typ=random -t=1 -n=199999 -q=200000 -maxa=654200 > test/bolivija.in.4e
+./bolivijaGEN -typ=random -t=1 -n=1999 -q=200000 -maxa=654200 > test/bolivija.in.4f
+./bolivijaGEN -typ=random -t=1 -n=199 -q=200000 -maxa=654200 > test/bolivija.in.4g
+./bolivijaGEN -typ=random -t=1 -n=19 -q=200000 -maxa=654200 > test/bolivija.in.4h
+./bolivijaGEN -typ=random -t=1 -n=3 -q=200000 -maxa=654200 > test/bolivija.in.4i
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=2 > test/bolivija.in.4j
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=10 > test/bolivija.in.4k
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=100 > test/bolivija.in.4l
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=1000 > test/bolivija.in.4m
+./bolivijaGEN -typ=smalllen -n=199999 -q=200000 -maxa=654200 -maxlen=10000 > test/bolivija.in.4n
+./bolivijaGEN -typ=manychanges -n=199999 -q=200000 -maxa=654200 > test/bolivija.in.4o
+./bolivijaGEN -typ=manychanges -n=199999 -q=200000 -maxa=500000 > test/bolivija.in.4p
 echo "subtask 4 in done"
 ./bolivija < test/bolivija.dummy.in.1 > test/bolivija.dummy.out.1
 ./bolivija < test/bolivija.dummy.in.2 > test/bolivija.dummy.out.2
