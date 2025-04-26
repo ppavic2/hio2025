@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  problempoints=100,
+  timelimit=3 sekunde,
+  memorylimit=512 MiB,
+]{Lirili Larila}
+
+Sokrat: 
+\textit{Reci Platone, slažeš li se sa mnom oko ovoga: 
+najjači borci su oni leteći, poput Bombardira Crocodilla ili Bombombinija Gusinija.}
+
+Platon:
+\textit{To naprosto nije tako. Kopneni borci, poput Brr Brr Patapima ili Tung Tung Tung Sahura 
+postigli su svoje rezultate usprkos tome što nemaju mogućnost letenja. }
+
+Sokrat:
+\textit{Smatram da je jedini način da dođemo do istine da pustimo borce da se bore te 
+da odredimo ishod na temelju toga. }
+
+Platon: 
+\textit{Bravo Sokrate, slažem se da ćemo tako doći do istine. }
+
+Odlučujuća borba odvijat će se na povezanom grafu s $N$ čvorova i $M$ bridova. 
+Lirili Larila, polu slonica polu kaktus, vlasnica je grafa pa će osigurati 
+da je riječ o njezinoj najdražoj vrsti grafa: kaktus grafu. 
+Za potrebe ovog zadatka, \textit{kaktus graf} definiramo kao jednostavan povezani graf 
+u kojem svaki čvor pripada najviše jednom ciklusu. 
+
+Borba se odvija na sljedeći način. 
+Na početku, svi leteći borci smješteni su u određenom početnom čvoru, a svi kopneni 
+borci smješteni su u nekom drugom početnom čvoru. 
+Kako se borba odvija, borci šire svoj utjecaj na graf te nastoje pokoriti što više čvorova. 
+U konačnici, čvor će biti pokoren od strane ili letećih ili kopnenih boraca, ovisno o tome 
+je li udaljenost toga čvora bliža početnom čvoru letećih boraca ili početnom čvoru 
+kopnenih boraca. 
+Čvorovi koji se nalaze na jednakoj udaljenosti od početnih čvorova letećih i kopnenih boraca 
+predstavljaju veliki izazov za obje skupine boraca 
+pa oni ostaju nepokoreni.
+
+Lirili Larila želi namjestiti ishod borbe. Naime, ona je već unaprijed 
+odredila prirodne brojeve $A$ i $B$, koji predstavljaju broj pokorenih 
+čvorova redom od strane letećih i kopnenih boraca. 
+Pomozite ovoj umiljatoj kaktus-slonici da odabere početne čvorove za obje vrste boraca 
+tako da na kraju borbe brojevi pokorenih čvorova odgovaraju brojevima $A$ i $B$, 
+ili odredite kako takav odabir nije moguć.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+
+U prvom su retku prirodni brojevi $N, M, A$ i $B$, redom broj čvorova i broj bridova 
+u danom kaktus grafu te brojevi pokorenih čvorova redom od strane letećih i kopnenih boraca.
+
+U sljedećih $M$ redaka nalaze se parovi brojeva $a$ i $b$ ($1 \leq a, b \leq N, a \ne b$), 
+redom bridovi grafa. 
+
+Dani graf bit će kaktus graf, to jest povezani graf u kojem svaki čvor pripada najviše jednom 
+ciklusu. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+
+Ukoliko je nemoguće napraviti izbor početnih čvorova koji zadovoljava uvjete zadatka, 
+u prvi i jedini redak ispišite \texttt{-1}. 
+
+Inače, u prvi i jedini redak ispišite dva prirodna broja odvojena razmakom, koja 
+predstavljaju oznake počentih čvorova letećih i kopnenih boraca. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Scoring
+\subsection*{Bodovanje}
+
+U svim podzadacima vrijedi $2 \leq N \leq 200~000$ te $1 \leq M \leq 400~000$. 
+
+{\renewcommand{\arraystretch}{1.4}
+  \setlength{\tabcolsep}{6pt}
+  \begin{tabular}{ccl}
+   Podzadatak & Broj bodova & Ograničenja \\ \midrule
+    1 & 6 & $N \leq 300$\\
+    2 & 8 & Dani graf je stablo te $N \leq 5000$. \\
+    3 & 25 & Dani graf je stablo. \\
+    4 & 13 & Dani graf ima točno jedan ciklus te $N \leq 5000$. \\
+    5 & 17 & Dani graf ima točno jedan ciklus te je garantirano da postoji rješenje  \\
+      &    & u kojem se oba početna čvora nalaze unutar tog ciklusa.  \\
+    6 & 8 & Dani graf ima točno jedan ciklus. \\
+    7 & 11 & $N \leq 5000$ \\
+    8 & 12 & Nema dodatnih ograničenja. \\
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X'X}
+\sampleinputs{test/lirili_larila.dummy.in.1}{test/lirili_larila.dummy.out.1} &
+\sampleinputs{test/lirili_larila.dummy.in.2}{test/lirili_larila.dummy.out.2} &
+\sampleinputs{test/lirili_larila.dummy.in.3}{test/lirili_larila.dummy.out.3}
+\end{tabularx}
+
+\textbf{Pojašnjenje prvog probnog primjera:}
+
+[slika]
+
+\textbf{Pojašnjenje trećeg probnog primjera:}
+
+[slika]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../hio.tex"
+%%% End:
