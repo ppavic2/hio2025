@@ -31,11 +31,19 @@ int relement(vector<int> &v) {
 }
 
 enum tree_type {
-	SHALLOW
+	SHALLOW,
+	DEEP,
+	SQRT,
+	CHAIN
 };
 
 enum cactus_type {
-	SHALLOW_SMALL
+	NO_CYCLES,
+	ONE_CYCLE,
+	SUN,
+	SMALL_CYCLES,
+	LARGE_CYCLES,
+	LARGE_CYCLES_WITH_SPACE
 };
 
 struct G {
@@ -136,9 +144,17 @@ void finish_output(G &graph) {
 int main() {
 	ios_base::sync_with_stdio(false); cin.tie(0);
 	rng = mt19937(chrono::steady_clock::now().time_since_epoch().count());
-	G final = gen_cactus(rint(5000, 10000), SHALLOW_SMALL);
-	//G final = gen_cactus(10, SHALLOW_SMALL);
+	//G final = gen_cactus(rint(5000, 10000), SHALLOW_SMALL);
+	//G final = gen_cactus(1000, SHALLOW_SMALL);
 	//G final = gen_tree(10, SHALLOW);
-	finish_output(final);
+	
+	int T = 1000;
+	
+	cout << T << endl;
+	
+	for(int i = 0;i < T;i++) {
+		G final = gen_cactus(rint(100, 3000), SHALLOW_SMALL);
+		finish_output(final);
+	}
 }
 
