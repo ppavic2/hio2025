@@ -6,9 +6,9 @@ cat correct > checker_output
 while diff -w checker_output correct
 do
 	./gen > input
-	#./pavic_brute < input > official
-	./pavic < input > output
-	./checker input output output > checker_output
+	./pavic < input > official
+	./$1 < input > output
+	./checker input official output > checker_output
 	echo $i
 	((i=i+1))
 done

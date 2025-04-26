@@ -175,7 +175,7 @@ int circ_dist(int A, int B, int C) {
 	return min(abs(A - B), C - abs(A - B));
 }
 
-void solve_cycle_case1(vi &cik, int A, int B) {
+bool solve_cycle_case1(vi &cik, int A, int B) {
 	int C = (int)cik.size();
 	int cnt = 0, j = 0;
 	M S;
@@ -201,7 +201,7 @@ void solve_cycle_case1(vi &cik, int A, int B) {
 			   	}
 			   	if(A == a) cout << x << " " << y << endl;
 			   	else cout << y << " " << x << endl;
-				exit(0);
+				return true;
 			}
 			if(C % 2 == 0 && A + B == n
 			  && len <= C - len && S.maax() >= C / 2 - len) {
@@ -211,7 +211,7 @@ void solve_cycle_case1(vi &cik, int A, int B) {
 			   	int y = cik[(j + target + circ_dist(t, j, C) - 1) % C];
 			   	if(A == a) cout << x << " " << y << endl;
 			   	else cout << y << " " << x << endl;
-			   exit(0);
+			    return true;
 			}
 			if(C % 2 == 0
 			  && n - A - B == cut[cik[j]] + cut[cik[(i + C - 1) % C]]
@@ -222,17 +222,18 @@ void solve_cycle_case1(vi &cik, int A, int B) {
 			   	int y = cik[(j + target + circ_dist(t, j, C)) % C];
 			   	if(A == a) cout << x << " " << y << endl;
 			   	else cout << y << " " << x << endl;
-			  	exit(0);
+			  	return true;
 			}
 		}
 		cnt -= cut[cik[i]];
 		S.pop();
 	}
+	return false;
 }
 
 int win[N], tko_win[N];
 
-void solve_cycle_case2(vi &cik, int A, int B) {
+bool solve_cycle_case2(vi &cik, int A, int B) {
 	int C = (int)cik.size();
 	for(int x : cik) win[x] = tko_win[x] = -1;
 	for(int x : cik) {
@@ -262,63 +263,66 @@ void solve_cycle_case2(vi &cik, int A, int B) {
 				int y = find_escape(tko_win[cik[i]], target - 1, gdje[cik[i]]);
 				if(A == a) cout << x << " " << y << endl;
 			   	else cout << y << " " << x << endl;
-			  	exit(0);
+			  	return true;
 			} else if(win[cik[(j + C - 1) % C]] >= target) {
 				int x = cik[(j + target - 1 + C) % C];
 				int y = find_escape(tko_win[cik[(j + C - 1) % C]], target - 1, gdje[cik[i]]);
 				if(A == a) cout << x << " " << y << endl;
 			   	else cout << y << " " << x << endl;
-			  	exit(0);
+			  	return true;
 			}
 		}
 		cnt -= cut[cik[i]];
 		len--;
 	}
+	return false;
 }
 
-int main() {
-	ios_base::sync_with_stdio(false); cin.tie(0);
-	memset(gdje, -1, sizeof(gdje));
+void solve() {
 	cin >> n >> m >> a >> b;
+	novi = 0;
+	for(int i = 0;i <= n + 10;i++) {
+		v[i].clear(); gdje[i] = -1;
+		tko[i].clear(); 
+		down[i] = up[i] = bio[i] = par[i] = dep[i] = siz[i] = escape[i] = cut[i] = 0;
+	}
 	for(int i = 0;i < m;i++) {
 		int x, y; cin >> x >> y;
 		v[x].PB(y), v[y].PB(x);
 	}
 	dfs(1, 1);
-	if(1) {
-		if(a + b == n) {
-			for(int i = 1;i <= n;i++) {
-				for(int j : v[i]){
-					if(j == par[i] || (gdje[i] != -1 && gdje[j] == gdje[i])) continue;
-					if(siz[j] == a) {
-						cout << j << " " << i << endl;
-						return 0;
-					}
-					if(siz[j] == b) {
-						cout << i << " " << j << endl;
-						return 0;
-					}
+	if(a + b == n) {
+		for(int i = 1;i <= n;i++) {
+			for(int j : v[i]){
+				if(j == par[i] || (gdje[i] != -1 && gdje[j] == gdje[i])) continue;
+				if(siz[j] == a) {
+					cout << j << " " << i << endl;
+					return;
+				}
+				if(siz[j] == b) {
+					cout << i << " " << j << endl;
+					return;
 				}
 			}
 		}
-		for(int i = 1;i <= n;i++) {
-			vector<pii> sus;
-			for(int j : v[i]) {
-				if(gdje[j] == gdje[i] && gdje[i] != -1) continue;
-				if(j == par[i]) sus.PB({j, n - siz[i]});
-				else sus.PB({j, siz[j]});
-			}
-			int A = -1, B = -1;
-			for(auto &[u, siz] : sus) {
-				if(siz == a) A = u;
-			}
-			for(auto &[u, siz] : sus) {
-				if(siz == b && u != A) B = u;
-			}
-			if(A > 0 && B > 0) {
-				cout << A << " " << B << endl;
-				return 0;
-			}
+	}
+	for(int i = 1;i <= n;i++) {
+		vector<pii> sus;
+		for(int j : v[i]) {
+			if(gdje[j] == gdje[i] && gdje[i] != -1) continue;
+			if(j == par[i]) sus.PB({j, n - siz[i]});
+			else sus.PB({j, siz[j]});
+		}
+		int A = -1, B = -1;
+		for(auto &[u, siz] : sus) {
+			if(siz == a) A = u;
+		}
+		for(auto &[u, siz] : sus) {
+			if(siz == b && u != A) B = u;
+		}
+		if(A > 0 && B > 0) {
+			cout << A << " " << B << endl;
+			return;
 		}
 	}
 	calc_escapes(1);
@@ -339,11 +343,16 @@ int main() {
 				escape[x] = max(escape[x], down[y] + 1);
 			}
 		}
-		solve_cycle_case1(cik, a, b);
-		solve_cycle_case1(cik, b, a);
-		solve_cycle_case2(cik, a, b);
-		solve_cycle_case2(cik, b, a);
+		if(solve_cycle_case1(cik, a, b)) return;
+		if(solve_cycle_case1(cik, b, a)) return;
+		if(solve_cycle_case2(cik, a, b)) return;
+		if(solve_cycle_case2(cik, b, a)) return;
 	}
-	cout << -1 << endl;
-	return 0;
+	return;
+}
+
+int main() {
+	ios_base::sync_with_stdio(false); cin.tie(0);
+	int T; cin >> T;
+	for(;T--;) solve();
 }

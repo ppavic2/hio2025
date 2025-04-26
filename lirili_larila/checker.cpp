@@ -96,23 +96,29 @@ void checker(ifstream &fin, ifstream &foff, ifstream &fout) {
   const string CORRECT = "Correct.";
 
   // Read official input
-  int a, b;
-  if (!(fin >> n >> m >> a >> b)) finish(0, TEST_DATA_ERROR);
-  for (int i = 0;i < m;i++) {
-  	int x, y;
-  	if(!(fin >> x >> y)) finish(0, TEST_DATA_ERROR);
-  	if(!(1 <= x && x <= n && 1 <= y && y <= n)) finish(0, TEST_DATA_ERROR);
-  	v[x].push_back(y);
-  	v[y].push_back(x);
+  
+  int T; 
+  if(!(fin >> T)) finish(0, TEST_DATA_ERROR);
+  for(;T--;) {
+	  int a, b;
+	  if (!(fin >> n >> m >> a >> b)) finish(0, TEST_DATA_ERROR);
+	  for(int i = 0;i <= n;i++) v[i].clear();
+	  for (int i = 0;i < m;i++) {
+	  	int x, y;
+	  	if(!(fin >> x >> y)) finish(0, TEST_DATA_ERROR);
+	  	if(!(1 <= x && x <= n && 1 <= y && y <= n)) finish(0, TEST_DATA_ERROR);
+	  	v[x].push_back(y);
+	  	v[y].push_back(x);
+	  }
+	  int u_off, v_off, u_con, v_con;
+	  if (!(foff >> u_off >> v_off)) finish(0, TEST_DATA_ERROR);
+	  if (!(1 <= u_off && u_off <= n && 1 <= v_off && v_off <= n)) finish(0, TEST_DATA_ERROR);
+	  if (!(fout >> u_con >> v_con)) finish(0, WRONG_ANS);
+	  if (!(1 <= u_con && u_con <= n && 1 <= v_con && v_con <= n)) finish(0, WRONG_ANS);
+	  if (count_pair(u_off, v_off) != (pair<int,int>){a, b}) finish(0, TEST_DATA_ERROR);
+	  if (count_pair(u_con, v_con) != (pair<int,int>){a, b}) finish(0, WRONG_ANS);
+	  finish(1, CORRECT);
   }
-  int u_off, v_off, u_con, v_con;
-  if (!(foff >> u_off >> v_off)) finish(0, TEST_DATA_ERROR);
-  if (!(1 <= u_off && u_off <= n && 1 <= v_off && v_off <= n)) finish(0, TEST_DATA_ERROR);
-  if (!(fout >> u_con >> v_con)) finish(0, WRONG_ANS);
-  if (!(1 <= u_con && u_con <= n && 1 <= v_con && v_con <= n)) finish(0, WRONG_ANS);
-  if (count_pair(u_off, v_off) != (pair<int,int>){a, b}) finish(0, TEST_DATA_ERROR);
-  if (count_pair(u_con, v_con) != (pair<int,int>){a, b}) finish(0, WRONG_ANS);
-  finish(1, CORRECT);
 }
 
 int main(int argc, char *argv[]) {
