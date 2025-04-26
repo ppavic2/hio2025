@@ -3,7 +3,7 @@ rm test/*
 #dummy tests
 ./gen 1 1 > test/konstrukcija.dummy.in.1
 ./gen 1 2 > test/konstrukcija.dummy.in.2
-./gen 1 3 > test/konstrukcija.duumy.in.3
+./gen 1 3 > test/konstrukcija.dummy.in.3
 
 ./gen 6 4 1   > test/konstrukcija.in.1a
 ./gen 10 2 1  > test/konstrukcija.in.1b
