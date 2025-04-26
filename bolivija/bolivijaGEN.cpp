@@ -124,7 +124,7 @@ int main(int argc, char* argv[])
 			if (rnd.next(0,1)) i=perm.back();
 			else i=n-perm.back()-1;
 			int x=rnd.next(0,maxa);
-			cout<<i<<' '<<x<<'\n';
+			cout<<i+1<<' '<<x<<'\n';
 		}
 	}
 }
