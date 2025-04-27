@@ -41,9 +41,7 @@ rm test/*
 ./gen 5 20 2 17 1 > test/konstrukcija.in.2k
 ./gen 5 20 2 18 1 > test/konstrukcija.in.2l
 ./gen 5 20 2 19 1 > test/konstrukcija.in.2m
-./gen 11 20 111   > test/konstrukcija.in.2n
-./gen 11 20 112   > test/konstrukcija.in.2o
-./gen 11 20 113   > test/konstrukcija.in.2p
+
 
 #subtask 3
 ./gen 6 6 1  > test/konstrukcija.in.3a
@@ -105,3 +103,6 @@ rm test/*
 ./gen 11 20 114   > test/konstrukcija.in.4ak
 ./gen 11 20 115   > test/konstrukcija.in.4al
 ./gen 11 20 116   > test/konstrukcija.in.4am
+./gen 11 20 111   > test/konstrukcija.in.2an
+./gen 11 20 112   > test/konstrukcija.in.2ao
+./gen 11 20 113   > test/konstrukcija.in.2ap
