@@ -17,7 +17,7 @@ Mirko promatra brojeve $0, 1, \dots, 2^N-1$ (kao binarne brojeve s $N$ binarnih 
 Vođen željom za korupcijom, Mirko će izabrati dva broja $X$ i $Y$ ($0 \leq X, Y < 2^N$) 
 koja se razlikuju u točno jednom bitu. Mirko će tada prebrisati 
 taj bit znakom “\texttt{?}” u oba broja $X$ i $Y$, 
-čime je postigao da se brojevi $X$ i $Y$ više ne mogu razlikovati. 
+čime je postigao korupciju: brojevi $X$ i $Y$ više se ne mogu razlikovati. 
 Mirko će ponavljati ovaj postupak s preostalim brojevima, dok na kraju ne dobije 
 ukupno $2^{N-1}$ parova brojeva koji se ne mogu razlikovati. 
 Dakle, svaki broj između $0$ i $2^N - 1$ član je točno jednog para i 
@@ -69,7 +69,7 @@ odabir parova, ali on ne mora zadovoljavati traženi uvjet.
   \begin{tabular}{ccl}
    Podzadatak & Broj bodova & Ograničenja \\ \midrule
     1 & 15 & $N \leq 4$ \\
-    2 & 15 & Vrijedi $a_i = 0$ za sve $i > 2$. \\
+    2 & 15 & Vrijedi $N \geq 2$ te $a_i = 0$ za sve $i > 2$. \\
     3 & 20 & $N \leq 6$\\
     4 & 50 & Nema dodatnih ograničenja. \\
 \end{tabular}}
