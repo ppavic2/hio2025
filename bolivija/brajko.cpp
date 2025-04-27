@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 typedef long long ll;
@@ -11,7 +12,8 @@ int n, q, a[N];
 struct Node {
 	int pref = 0, suf = 0;
 	int taken = 0;
-	ll ans = 1;
+	ll ans = 0;
+	Node() : ans(1) {}
 } tour[OFF];
 
 void calculate(int node, int l, int r) {
