@@ -286,6 +286,63 @@ int main(int argc, char** argv){
 	cout << tests << endl;
 	
 	for(int i = 0;i < tests;i++) {
+		if (C == "SPECIAL_1") {
+			int n = max_n;
+			cout << n << " " <<  n - 1 << " " << n - 4 << " " << 1 << endl;
+			for(int i = 1;i + 1 <= n - 4;i++) {
+				cout << i << " " << i + 1 << endl;
+			}
+			int k = (2 * n) / 3;
+			cout << k << " " << n << endl;
+			cout << n << " " << n - 1 << endl; 
+			cout << n << " " << n - 2 << endl; 
+			cout << n << " " << n - 3 << endl; 
+			continue;
+		} else if(C == "SPECIAL_2") {
+			int n = max_n;
+			vi p(n + 1);
+			for(int i = 1;i <= n;i++) p[i] = i;
+			shuffle(p.begin() + 1, p.end(), rng);
+			cout << n << " " <<  n - 1 << " " << n - 4 << " " << 1 << endl;
+			for(int i = 1;i + 1 <= n - 4;i++) {
+				cout << p[i] << " " << p[i + 1] << endl;
+			}
+			int k = (2 * n) / 3;
+			cout << p[k] << " " << p[n] << endl;
+			cout << p[n] << " " << p[n - 1] << endl; 
+			cout << p[n] << " " << p[n - 2] << endl; 
+			cout << p[n] << " " << p[n - 3] << endl; 
+			continue;
+		} else if (C == "SPECIAL_3") {
+			int n = max_n;
+			cout << n << " " <<  n << " " << n - 4 << " " << 1 << endl;
+			for(int i = 1;i + 1 <= n - 4;i++) {
+				cout << i << " " << i + 1 << endl;
+			}
+			int k = (2 * n) / 3;
+			cout << k << " " << n << endl;
+			cout << n << " " << n - 1 << endl; 
+			cout << n << " " << n - 2 << endl; 
+			cout << n << " " << n - 3 << endl; 
+			cout << 1 << " " << 3 << endl;
+			continue;
+		} else if(C == "SPECIAL_4") {
+			int n = max_n;
+			vi p(n + 1);
+			for(int i = 1;i <= n;i++) p[i] = i;
+			shuffle(p.begin() + 1, p.end(), rng);
+			cout << n << " " <<  n << " " << n - 4 << " " << 1 << endl;
+			for(int i = 1;i + 1 <= n - 4;i++) {
+				cout << p[i] << " " << p[i + 1] << endl;
+			}
+			int k = (2 * n) / 3;
+			cout << p[k] << " " << p[n] << endl;
+			cout << p[n] << " " << p[n - 1] << endl; 
+			cout << p[n] << " " << p[n - 2] << endl; 
+			cout << p[n] << " " << p[n - 3] << endl;
+			cout << p[1] << " " << p[3] << endl;
+			continue;
+		} 
 		int n = max_n - rint(0, min(50, max_n / 10));
 		G graph = gen_cactus(n, C, T);
 		finish_output(graph, C, T);
