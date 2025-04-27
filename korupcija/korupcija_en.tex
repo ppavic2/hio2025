@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  problempoints=100,
+  timelimit=1 second,
+  memorylimit=512 MiB,
+]{Korupcija}
+
+\textit{... Corruption for all, not just for some. I offer corruption, a corrupt order, work, and growth. 
+Whatever these other masters offer you, I offer double.  
+I even propose an eighth case: To whom? How much? ...}
+
+Little Mirko was fascinated by the speech of the uncle on television.  
+He was convinced he understood the message: he had to corrupt the bits of his binary numbers.
+
+Mirko considers the numbers $0, 1, \dots, 2^N-1$ (viewed as binary numbers with $N$ binary digits).  
+Driven by his desire for corruption, Mirko will choose two numbers $X$ and $Y$ ($0 \leq X, Y < 2^N$) 
+that differ in exactly one bit.  
+He will then overwrite that bit with a “\texttt{?}” symbol in both numbers $X$ and $Y$, 
+thus achieving corruption: the numbers $X$ and $Y$ can no longer be distinguished.  
+Mirko will repeat this process with the remaining numbers until he obtains 
+exactly $2^{N-1}$ pairs of numbers that cannot be distinguished.  
+In other words, each number between $0$ and $2^N-1$ belongs to exactly one pair, and  
+two numbers can form a pair if and only if they differ in exactly one bit.
+
+For an extra challenge, Mirko decides he wants exactly $a_i$ pairs 
+where the overwritten “\texttt{?}” symbol is at the $i$-th bit position, 
+for each $i = 0, 1, \dots, N-1$.  
+Here, bits are numbered from least significant to most significant, so the $i$-th bit 
+corresponds to the value $2^i$.  
+Help Mirko by choosing the pairs to satisfy the desired conditions, or determine 
+that it is impossible to do so.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Input}
+
+The first line contains a natural number $N$ as described above.
+
+The second line contains $N$ non-negative integers $a_i$, for $i = 0, \dots, N-1$,  
+where $a_i$ represents the required number of pairs that differ at the $i$-th bit position.  
+The sum of all $a_i$ is exactly $2^{N-1}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Output}
+
+If it is impossible to form pairs satisfying the required conditions, 
+output a single line containing \texttt{-1}.
+
+Otherwise, output $2^{N-1}$ lines. Each line should contain two space-separated integers $X$ and $Y$, 
+representing a selected pair.  
+You may output the pairs in any order.
+
+If multiple solutions exist, output any.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Scoring
+\subsection*{Scoring}
+
+In all subtasks, it holds that $1 \leq N \leq 20$.
+
+In every subtask, 20\% of the points are awarded for simply determining 
+whether it is possible to satisfy the conditions.  
+For these points, if you output anything other than \texttt{-1}, 
+you may print any pairing (even if it does not fully satisfy the required condition).
+
+{\renewcommand{\arraystretch}{1.4}
+  \setlength{\tabcolsep}{6pt}
+  \begin{tabular}{ccl}
+   Subtask & Points & Constraints \\ \midrule
+    1 & 15 & $N \leq 4$ \\
+    2 & 15 & $N \geq 2$ and $a_i = 0$ for all $i > 2$ \\
+    3 & 20 & $N \leq 6$ \\
+    4 & 50 & No additional constraints. \\
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sample Cases
+\subsection*{Sample Cases}
+\begin{tabularx}{\textwidth}{X'X'X}
+\sampleinputs{test/korupcija.dummy.in.1}{test/korupcija.dummy.out.1} &
+\sampleinputs{test/korupcija.dummy.in.2}{test/korupcija.dummy.out.2} &
+\sampleinputs{test/korupcija.dummy.in.3}{test/korupcija.dummy.out.3}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
