@@ -3,7 +3,6 @@ rm test/*
 #dummy tests
 ./gen 1 1 > test/konstrukcija.dummy.in.1
 ./gen 1 2 > test/konstrukcija.dummy.in.2
-./gen 1 3 > test/konstrukcija.dummy.in.3
 
 ./gen 6 4 1   > test/konstrukcija.in.1a
 ./gen 10 2 1  > test/konstrukcija.in.1b
@@ -103,6 +102,6 @@ rm test/*
 ./gen 11 20 114   > test/konstrukcija.in.4ak
 ./gen 11 20 115   > test/konstrukcija.in.4al
 ./gen 11 20 116   > test/konstrukcija.in.4am
-./gen 11 20 111   > test/konstrukcija.in.2an
-./gen 11 20 112   > test/konstrukcija.in.2ao
-./gen 11 20 113   > test/konstrukcija.in.2ap
+./gen 11 20 111   > test/konstrukcija.in.4an
+./gen 11 20 112   > test/konstrukcija.in.4ao
+./gen 11 20 113   > test/konstrukcija.in.4ap
