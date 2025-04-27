@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem statement
+\begin{statement}[
+  problempoints=100,
+  timelimit=1 sekunda,
+  memorylimit= 512 MiB,
+]{Korupcija}
+
+\textit{... Korupcija svima, a ne samo njima. Ja nudim korupciju, koruptivni red, rad i rast. 
+Sve što vam ovi majstori ponude, ja nudim duplo. 
+Predlažem i osmi padež: Kome? Koliko? ...}
+
+Mali Mirko bio je očaran govorom stričeka s televizije. 
+Bio je uvjeren kako je razumio poruku: morao je korumpirati bitove svojih binarnih brojeva. 
+
+Mirko promatra brojeve $0, 1, \dots, 2^N-1$ (kao binarne brojeve s $N$ binarnih znamenki). 
+Vođen željom za korupcijom, Mirko će izabrati dva broja $X$ i $Y$ ($0 \leq X, Y < 2^N$) 
+koja se razlikuju u točno jednom bitu. Mirko će tada prebrisati 
+taj bit znakom “\texttt{?}” u oba broja $X$ i $Y$, 
+čime je postigao da se brojevi $X$ i $Y$ više ne mogu razlikovati. 
+Mirko će ponavljati ovaj postupak s preostalim brojevima, dok na kraju ne dobije 
+ukupno $2^{N-1}$ parova brojeva koji se ne mogu razlikovati. 
+Dakle, svaki broj između $0$ i $2^N - 1$ član je točno jednog para i 
+dva broja mogu biti u paru isključivo ako se razlikuju u točno jednom bitu (binarnoj znamenci). 
+
+Radi većeg izazova, Mirko je odlučio da želi imati točno $a_i$ parova 
+kojima znak “\texttt{?}” stoji na mjestu $i$-tog bita, za $i = 0, 1, \dots, N-1$. 
+Pri tome, bitove brojimo od manje značajnih do više značajnih, pa tako $i$-ti bit 
+odgovara vrijednosti $2^i$. 
+Pomozite Mirku te napravite odabir parova koji zadovoljava tražene uvjete, ili 
+odredite kako takav odabir ne postoji. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input
+\subsection*{Ulazni podaci}
+
+U prvom je retku prirodan broj $N$ iz teksta zadatka. 
+
+U drugom je retku niz od $N$ nenegativnih cijelih brojeva $a_i$, za $i = 0, \dots, N-1$, 
+pri čemu $a_i$ predstavlja traženi broj parova koji se razlikuju u $i$-tom bitu. 
+Zbroj tih brojeva iznosi točno $2^{N-1}$. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Output
+\subsection*{Izlazni podaci}
+
+Ukoliko nije moguće napraviti odabir parova koji zadovoljava uvjete zadatka, 
+u jedini redak ispišite \texttt{-1}. 
+
+Inače, ispišite $2^{N-1}$ redaka. U svaki redak ispišite dva razmakom odvojena broja $X$ i $Y$ 
+koji predstavljaju odabrani par. Parove možete ispisati u bilo kojem redoslijedu.
+
+Ukoliko postoji više rješenja, ispišite bilo koje. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Scoring
+\subsection*{Bodovanje}
+
+U svim podzadacima vrijedi $1 \leq N \leq 20$. 
+
+U svakom podzadatku, 20\% bodova donosi samo odlučivanje
+postoji li odabir parova koji zadovoljava uvjete zadatka ili ne.  
+Za te bodove potrebno je, ako niste ispisali \texttt{-1}, ispisati nekakav 
+odabir parova, ali on ne mora zadovoljavati traženi uvjet.
+
+
+{\renewcommand{\arraystretch}{1.4}
+  \setlength{\tabcolsep}{6pt}
+  \begin{tabular}{ccl}
+   Podzadatak & Broj bodova & Ograničenja \\ \midrule
+    1 & 15 & $N \leq 4$ \\
+    2 & 15 & Vrijedi $a_i = 0$ za sve $i > 2$. \\
+    3 & 20 & $N \leq 6$\\
+    4 & 50 & Nema dodatnih ograničenja. \\
+\end{tabular}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Examples
+\subsection*{Probni primjeri}
+\begin{tabularx}{\textwidth}{X'X'X}
+\sampleinputs{test/korupcija.dummy.in.1}{test/korupcija.dummy.out.1} &
+\sampleinputs{test/korupcija.dummy.in.2}{test/korupcija.dummy.out.2} &
+\sampleinputs{test/korupcija.dummy.in.3}{test/korupcija.dummy.out.3}
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We're done
+\end{statement}
+
+%%% Local Variables:
+%%% mode: latex
+%%% mode: flyspell
+%%% ispell-local-dictionary: "croatian"
+%%% TeX-master: "../hio.tex"
+%%% End:

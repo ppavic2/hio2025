@@ -49,8 +49,8 @@ int main(int argc, char** argv) {
 		int x = atoi(argv[2]);
 
 		if(x == 1) printf("2\n2 0\n");
-		if(x == 2) printf("3\n2 0 2\n");
-		if(x == 3) printf("4\n0 4 2 4\n");
+		if(x == 2) printf("2\n1 1\n");
+		if(x == 3) printf("3\n2 0 2\n");
 	}
 	if(type == 2) {
 		//random (large n)

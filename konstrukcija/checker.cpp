@@ -81,11 +81,11 @@ void checker(ifstream &fin, ifstream &foff, ifstream &fout) {
   } else {
     for(int i = 0;i < (1 << (n - 1));i++) {
       int x, y;
-      if(!(fout >> x >> y)) finish(0.20, WRONG_ANS);
-      if(x < 0 || x >= (1 << n)) finish(0.20, WRONG_ANS);
-      if(y < 0 || y >= (1 << n)) finish(0.20, WRONG_ANS);
-      if(vis[x] || vis[y]) finish(0.20, WRONG_ANS);
-      if(pos[x ^ y] == -1) finish(0.20, WRONG_ANS);
+      if(!(fout >> x >> y)) finish(0, WRONG_ANS);
+      if(x < 0 || x >= (1 << n)) finish(0, WRONG_ANS);
+      if(y < 0 || y >= (1 << n)) finish(0, WRONG_ANS);
+      if(vis[x] || vis[y]) finish(0, WRONG_ANS);
+      if(pos[x ^ y] == -1) finish(0, WRONG_ANS);
       if(a[pos[x ^ y]] == 0) finish(0.20, WRONG_ANS);
       a[pos[x ^ y]]--;
       vis[x] = vis[y] = 1; 
