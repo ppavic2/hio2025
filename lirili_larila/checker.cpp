@@ -117,8 +117,8 @@ void checker(ifstream &fin, ifstream &foff, ifstream &fout) {
 	  if (!(1 <= u_con && u_con <= n && 1 <= v_con && v_con <= n)) finish(0, WRONG_ANS);
 	  if (count_pair(u_off, v_off) != (pair<int,int>){a, b}) finish(0, TEST_DATA_ERROR);
 	  if (count_pair(u_con, v_con) != (pair<int,int>){a, b}) finish(0, WRONG_ANS);
-	  finish(1, CORRECT);
   }
+  finish(1, CORRECT);
 }
 
 int main(int argc, char *argv[]) {

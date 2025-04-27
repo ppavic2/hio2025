@@ -52,9 +52,7 @@ struct G {
 	}
 };
 
-int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(0);
+void solve() {
 	int n, m, a, b; cin >> n >> m >> a >> b;
 	G graf(n);
 	for(int i = 0;i < m;i++) {
@@ -66,11 +64,18 @@ int main() {
 			pii cnts = graf.count_pair(i, j);
 			if(cnts == (pii){a, b}) {
 				cout << i + 1 << " " << j + 1 << endl;
-				return 0;
+				return;
 			} else if(cnts == (pii){b, a}) {
 				cout << j + 1 << " " << i + 1 << endl;
-				return 0;
+				return;
 			}
 		}
 	}
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+	int T; cin >> T;
+	for(;T--;) solve();
 }
