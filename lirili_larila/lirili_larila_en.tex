@@ -8,14 +8,14 @@
 
 Socrates:  
 \textit{Tell me, Plato, do you agree with me on this:  
-the strongest warriors are those who can fly, like Bombardiro Crocodillo or Bombombini Gusini?}
+the strongest fighters are those who can fly, like Bombardiro Crocodillo or Bombombini Gusini?}
 
 Plato:  
-\textit{That is simply not the case. Land warriors, such as Brr Brr Patapim and Tung Tung Tung Sahur, 
+\textit{That is simply not the case. Land fighters, such as Brr Brr Patapim and Tung Tung Tung Sahur, 
 have achieved their success despite their inability to fly.}
 
 Socrates:  
-\textit{I believe the only way to find the truth is to let the warriors fight, and  
+\textit{I believe the only way to find the truth is to let the fighters fight, and  
 determine the outcome based on that.}
 
 Plato:  
@@ -27,18 +27,18 @@ For the purposes of this problem, a \textit{cactus graph} is defined as a simple
 in which each vertex belongs to at most one cycle.
 
 The battle unfolds as follows:  
-Initially, all flying warriors are placed at one designated starting vertex, 
-and all land warriors are placed at a different designated starting vertex.  
-As the battle progresses, the warriors spread their influence across the graph, attempting to conquer as many vertices as possible.  
-Ultimately, a vertex is conquered either by the flying warriors or the land warriors, depending on  
-whether it is closer to the starting vertex of the flying warriors or that of the land warriors.  
+Initially, all flying fighters are placed at one designated starting vertex, 
+and all land fighters are placed at a different designated starting vertex.  
+As the battle progresses, the fighters spread their influence across the graph, attempting to conquer as many vertices as possible.  
+Ultimately, a vertex is conquered either by the flying fighters or the land fighters, depending on  
+whether it is closer to the starting vertex of the flying fighters or that of the land fighters.  
 Vertices that are equidistant from both starting vertices  
 remain unconquered, as they pose a significant challenge to both sides.
 
 Lirili Larila wishes to control the outcome of the battle.  
 She has already predetermined two positive integers $A$ and $B$, 
-representing the number of vertices to be conquered by the flying and land warriors, respectively.  
-Help this lovable cactus-elephant choose starting vertices for both types of warriors 
+representing the number of vertices to be conquered by the flying and land fighters, respectively.  
+Help this lovable cactus-elephant choose starting vertices for both types of fighters 
 so that, at the end of the battle, the number of conquered vertices matches the values $A$ and $B$.
 
 Additionally, you must find such a choice for $T$ different scenarios.
@@ -53,7 +53,7 @@ Each scenario is described as follows:
 
 The first line contains four positive integers $N$, $M$, $A$, and $B$, representing 
 the number of vertices and edges in the cactus graph, and the number of vertices 
-to be conquered by the flying and land warriors, respectively.
+to be conquered by the flying and land fighters, respectively.
 
 Each of the next $M$ lines contains two integers $a$ and $b$ ($1 \leq a, b \leq N$, $a \neq b$),  
 representing an edge of the graph.
@@ -70,7 +70,7 @@ The test data will guarantee that it is always possible to find a valid choice o
 Print $T$ lines, one for each scenario.
 
 In the $i$-th line, output two space-separated positive integers,
-representing the chosen starting vertices for the flying and land warriors 
+representing the chosen starting vertices for the flying and land fighters 
 in the $i$-th scenario.  
 If multiple solutions exist, you may output any.
 
@@ -107,15 +107,15 @@ The constraints listed below apply individually to each of the $T$ given scenari
 \end{tabularx}
 
 \textbf{Explanation of the First Sample Case:} \\
-The flying warriors conquer vertices 4, 5, and 6, while the land warriors conquer vertex 3.  
+The flying fighters conquer vertices 4, 5, and 6, while the land fighters conquer vertex 3.  
 Vertices 1 and 2 remain unconquered.
 
 \textbf{Explanation of the Second Sample Case:} \\
-The flying warriors conquer vertices 1, 2, and 4, while the land warriors conquer vertices 5 and 6.  
+The flying fighters conquer vertices 1, 2, and 4, while the land fighters conquer vertices 5 and 6.  
 Vertex 3 remains unconquered.
 
 \textbf{Explanation of the Third Sample Case:} \\
-The flying warriors conquer vertices 4, 5, and 6, while the land warriors conquer vertices 1, 2, and 3.  
+The flying fighters conquer vertices 4, 5, and 6, while the land fighters conquer vertices 1, 2, and 3.  
 There are no unconquered vertices.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
